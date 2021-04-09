@@ -1,0 +1,22 @@
+{
+  "name": "node-redme-generator",
+  "version": "1.0.0",
+  "description": "[How to create a Professional README](./readme-guide.md)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MLemke24/Node-Redme-Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MLemke24/Node-Redme-Generator/issues"
+  },
+  "homepage": "https://github.com/MLemke24/Node-Redme-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
+}
