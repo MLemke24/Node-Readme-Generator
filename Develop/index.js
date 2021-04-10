@@ -11,18 +11,27 @@ const promptUser = () => {
         type: 'input',
         name: 'name',
         message: 'what is your project name (Required)',
-    //     validate: nameInput => {
-    //     if (nameInput) {
-    //       return true;
-    //     } else {
-    //       console.log('Please enter your name!');
-    //       return false;
-    // })
+        validate: nameInput => {
+          if (nameInput) {
+            return true;
+          } else {
+            console.log("please enter a valid project name")
+            return false;
+          }
+        }
   },
   {
     type: 'input',
     name: 'description',
     message: 'Please describe your Project',
+    validate: nameInput => {
+      if (nameInput) {
+        return true;
+      } else {
+        console.log("please enter a valid description")
+        return false;
+      }
+    }
   },
   {
     type: 'input',
@@ -31,13 +40,13 @@ const promptUser = () => {
   },
   {
     type: 'input',
-    name: 'Usage Info',
+    name: 'UsageInfo',
     message: 'What usage info would you like to provide?',
   },
   {
     type: 'input',
     name: 'Contributions',
-    message: 'Any contribution Guidelines?',
+    message: 'Any contribution guidelines?',
   },
   {
     type: 'input',
@@ -45,25 +54,39 @@ const promptUser = () => {
     message: 'How can we test your application?',
   },
   {
-    type: 'checkbox',
+    type: 'list',
     name: 'Licenses',
-    message: 'What license (Check all that apply)',
+    message: 'What license would you like to apply? (Check all that apply)',
     choices: ['MIT', 'Apache', 'Boost', 'Bash']
   },
   {
       type: 'input',
-      name: 'Email',
+      name: 'Github',
       message: 'Enter your GitHub Username (Required)',
+      validate: nameInput => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("please enter a valid Github Username")
+          return false;
+        }
+      }
   },
  {
     type: 'input',
-    name: 'Questions',
+    name: 'Email',
     message: 'Enter your email (Required)',
+    validate: nameInput => {
+      if (nameInput) {
+        return true;
+      } else {
+        console.log("please enter a valid email address")
+        return false;
+      }
+    }
  }
     ])
 }
-console.log(promptUser)
-
 
 // Function call to initialize app
 promptUser()

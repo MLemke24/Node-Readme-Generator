@@ -1,45 +1,46 @@
 
+function renderLicenseBadge(license) {
+   
+return `![Badge](https://img.shields.io/badge/license-${license}-orange)`
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+  
+}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  const {name, description, installation, UsageInfo, Contributions, Test, Licenses, Email, Questions } = data
-  return `# ${name} 
+  const {name, description, installation, UsageInfo, Contributions, Test, Licenses, Github, Email } = data
+  return `
+ # ${name} 
 
-  ## Description
-    ${description}
+ ## License
+${renderLicenseBadge(Licenses)} 
 
-  ##Table Of Contents
-    
-  ##Installation
-    ${installation}
+ ## Description
+${description}
 
-  ##Usage Info
-    {UsageInfo}
+ ## Table Of Contents
+1. [Installation](#Installation)
+2. [Usage Info](#UsageInfo)
+3. [Contributions](#Contributions)
+4. [Test](#Test)
+5. [License](#License)
+6. [Questions](#Questions)
 
-  ##Contributions
-    ${Contributions}
+ ## Installation
+${installation}
 
-  ##Test
-    ${Test}
+ ## Usage Info
+${UsageInfo}
 
-  ##License
-    ${Licenses}
+ ## Contributions
+${Contributions}
 
-  ##Questions
-    ${Email}
-    ${Questions}
+ ## Test
+${Test}
+
+
+ ## Questions
+ <a href= "https://github.com/${Github}">
+${Email}
 
 `;
 }
